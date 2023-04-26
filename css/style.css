@@ -1,0 +1,57 @@
+:root {
+    --orange: #BA590A;
+    --dark_orange: #BA3B0A;
+    --light_orange: #FFA458;
+    --styling_font: 'Dancing Script';
+    --body_font: 'Montserrat';
+    --heading_font: 'Playfair Display';
+
+}
+body {
+    font-family: var(--body_font);
+}
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 2em;
+    align-items: center;
+    position: sticky;
+}
+header img {
+    width: 30%;
+}
+img {
+    width: 100%;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+.line {
+    width: 40px;
+    height: 3px;
+    background-color: var(--dark_orange);
+    margin: 0.3em 0em;
+    border-radius: 5px;
+}
+.nav_list {
+    display: none;
+    list-style: none;
+    position: absolute ;
+    background-color: white;
+    left: 70% ;
+    padding: 3em;
+}
+.nav_list li {
+    /* padding: 1em ; */
+    margin-bottom: 1em;
+}
+.nav_list li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+}
