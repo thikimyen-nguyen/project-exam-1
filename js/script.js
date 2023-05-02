@@ -4,13 +4,31 @@ const navList = document.querySelector('.nav_list');
 hamburger.innerHTML += `<div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>`
-navList.innerHTML += ` <li><a href="index.html">Home</a></li>
-                        <li><a href="recipes.html">Recipes</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>`
+navList.innerHTML += ` <li><a class="nav_link" href="index.html">Home</a></li>
+                        <li><a class="nav_link" href="recipes.html">Recipes</a></li>
+                        <li><a class="nav_link" href="about.html">About</a></li>
+                        <li><a class="nav_link" href="contact.html">Contact</a></li>`
 hamburger.onclick = function showNavList() {
     navList.style.display = "block";
 }
+
+const currentPageURL = window.location.href;
+
+
+const navLinks = document.querySelectorAll(".nav_link");
+
+
+for (let i = 0; i < navLinks.length; i++) {
+    const navLinkUrl = navLinks[i].href;
+   
+    if (currentPageURL === navLinkUrl) {
+        navLinks[i].classList.add("active_page");
+      
+    }
+}
+
+
+
 
 // const url = " https://howareyounorway.no/wp-json/wp/v2/posts/65";
 

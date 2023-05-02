@@ -76,12 +76,17 @@ header img {
 .nav_list li {
     /* padding: 1em ; */
     margin-bottom: 1em;
+    
 }
 .nav_list li a{
     display: block;
     text-decoration: none;
     color: black;
-    padding: 1em;
+    padding: 0.5em 1em;
+}
+.active_page {
+    background-color: var(--light_orange);
+    border-radius: 20px;
 }
 /* Footer */
 footer {
