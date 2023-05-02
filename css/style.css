@@ -1,34 +1,61 @@
+/* Global for mobile */
+/* General */
 :root {
     --orange: #BA590A;
     --dark_orange: #BA3B0A;
     --light_orange: #FFA458;
-    --styling_font: 'Dancing Script';
-    --body_font: 'Montserrat';
-    --heading_font: 'Playfair Display';
+    --styling_font: 'Dancing Script', Arial, Verdana, Tahoma, Georgia, sans-serif;
+    --body_font: 'Montserrat', Arial, Verdana, Tahoma, Georgia, sans-serif;
+    --heading_font: 'Playfair Display', Arial, Verdana, Tahoma, Georgia, sans-serif;
 
 }
 body {
     font-family: var(--body_font);
+    color: black;
+    font-size: 1rem;
 }
+img {width: 100%;
+}
+h1, h2 {
+    text-transform: capitalize;
+    font-family: var(--heading_font);
+}
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    /* margin: 2em 0em; */
+    /* padding: 0.5em; */
+}
+h1 hr {
+    border-top: 1px solid var(--dark_orange);
+   
+}
+h2 {
+    font-size: 1rem;
+}
+.styling{
+    font-family: var(--styling_font);
+    color: black;
+    font-weight: 300;
+}
+/* Header */
 header {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 1fr;
     padding: 2em;
     align-items: center;
     position: sticky;
+    position: relative;
 }
 header img {
     width: 30%;
-}
-img {
-    width: 100%;
 }
 
 .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: relative;
+   
 }
 .line {
     width: 40px;
@@ -42,8 +69,9 @@ img {
     list-style: none;
     position: absolute ;
     background-color: white;
-    left: 70% ;
-    padding: 3em;
+    left: 60% ;
+    padding: 2em;
+    z-index: 1;
 }
 .nav_list li {
     /* padding: 1em ; */
@@ -54,4 +82,66 @@ img {
     text-decoration: none;
     color: black;
     padding: 1em;
+}
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--light_orange);
+    padding-top: 1em;
+}
+footer img {
+    width: 15%;
+}
+footer p {
+    background-color: var(--dark_orange);
+    color: white;
+    padding: 0.5em;
+}
+
+
+
+/* Tablet */
+@media only screen and (min-width: 641px) {
+
+    h1 {
+        font-size: 1.7rem;
+    }
+   .hamburger {
+    display: none;
+   }
+   .nav_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    background-color: transparent;
+    position:static;
+    }
+    header img {
+        width: 50%;
+    }
+    .nav_list li {
+        font-size: 1.2rem;
+    }
+    
+}
+
+/* Desktop */
+@media only screen and (min-width: 1008px) {
+    body {
+        max-width: 1400px;
+        margin: auto;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    header img {
+        width: 30%;
+    }
+   
+    .nav_list li {
+        font-size: 1.5rem;
+    }
 }
