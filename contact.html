@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to my blog for the love of Food, Family and Friends">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>3F blog | Contact</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/3f-high-resolution-logo-color-on-transparent-background.webp" alt="3f logo"></a>
+        <nav class="header_nav">
+            <div class="hamburger"></div>
+            <ul class="nav_list"></ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <form>
+            <label for="name">Name</label>
+            <div class="error" id="name_error">*Please enter your name with at leaste 05 characters</div>
+            <input type="text" name="name" id="name" placeholder="John Smith" aria-required="true">
+            <label for="email">Email</label>
+            <div class="error" id="email_error">*Please enter a valid email address</div>
+            <input type="email" name="email" id="email" placeholder="abc@3f.com" aria-required="true">
+            <label for="subject">Subject</label>
+            <div class="error" id="subject_error">*Please enter a subject with at least 15 characters</div>
+            <input type="text" name="subject" id="subject" placeholder="Get cookbook" aria-required="true">
+            <label for="message">Message</label>
+            <div class="error" id="message_error">*Please type your message with at least 25 characters</div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your text here..."></textarea>
+            <button id="submit_contact" class="cta">Submit</button>
+        </form>   
+       
+    </main>
+    <footer></footer>
+    <script src="js/script.js" type="module"></script>
+    <script src="js/contact.js" type="module"></script>
+</body>
+</html>

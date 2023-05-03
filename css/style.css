@@ -105,12 +105,19 @@ footer img {
     padding: 0.5em;
 }
 .footer_content {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     display: flex;
     text-align: left;
     justify-content: center;
 }
-
+/* CTA button */
+.cta {
+    background-color: var(--dark_orange);
+    border-radius: 10px;
+    padding: 0.5em;
+    font-size: 1rem;
+    color: white;
+}
 
 
 /* Tablet */
@@ -120,6 +127,9 @@ footer img {
     }
     h1 {
         font-size: 2rem;
+    }
+    h2, .cta {
+        font-size: 1.3rem;
     }
    .hamburger {
     display: none;
@@ -141,12 +151,12 @@ footer img {
         margin-top: 5em;
     }
     .footer_content {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
     footer img {
         width: 15%;
     }
-    
+   
     
 }
 
@@ -159,7 +169,7 @@ footer img {
     h1 {
         font-size: 2.5rem;
     }
-    h2 {
+    h2, .cta {
         font-size: 1.5rem;
     }
     header img {

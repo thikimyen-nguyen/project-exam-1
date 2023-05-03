@@ -1,0 +1,41 @@
+/* Global for mobile */
+form {
+    padding: 0em 1em;
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    padding: 0.8em;
+    border-radius: 5px;
+    margin: 0.5em 0em 1.5em 0em;
+}
+button {
+    width: 30%;
+}
+.error {
+    color: red;
+    font-size: 0.7rem;
+    display: none;
+}
+
+@media only screen and (min-width: 641px) {
+	main {
+        max-width: 600px;
+        margin: auto;
+    }
+    .error {
+        font-size: 0.8rem;
+    }
+   
+}
+
+/* Desktop */
+@media only screen and (min-width: 1008px) {
+	main {
+        max-width: 800px;
+    }
+    .error {
+        font-size: 1rem;
+    }
+   
+}
