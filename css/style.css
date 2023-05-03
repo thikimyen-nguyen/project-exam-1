@@ -14,7 +14,8 @@ body {
     color: black;
     font-size: 1rem;
 }
-img {width: 100%;
+img {
+    width: 100%;
 }
 h1, h2 {
     text-transform: capitalize;
@@ -23,7 +24,7 @@ h1, h2 {
 h1 {
     text-align: center;
     font-size: 1.5rem;
-    /* margin: 2em 0em; */
+    margin-bottom: 1.5em;
     /* padding: 0.5em; */
 }
 h1 hr {
@@ -93,23 +94,32 @@ footer {
     text-align: center;
     background-color: var(--light_orange);
     padding-top: 1em;
+    margin-top: 2em;
 }
 footer img {
-    width: 15%;
+    width: 25%;
 }
-footer p {
+.footer_ending {
     background-color: var(--dark_orange);
     color: white;
     padding: 0.5em;
+}
+.footer_content {
+    font-size: 0.5rem;
+    display: flex;
+    text-align: left;
+    justify-content: center;
 }
 
 
 
 /* Tablet */
 @media only screen and (min-width: 641px) {
-
+    body {
+        font-size: 1.2rem;
+    }
     h1 {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
    .hamburger {
     display: none;
@@ -122,11 +132,21 @@ footer p {
     position:static;
     }
     header img {
-        width: 50%;
+        width: 80%;
     }
     .nav_list li {
         font-size: 1.2rem;
     }
+    footer {
+        margin-top: 5em;
+    }
+    .footer_content {
+        font-size: 0.7rem;
+    }
+    footer img {
+        width: 15%;
+    }
+    
     
 }
 
@@ -137,16 +157,20 @@ footer p {
         margin: auto;
     }
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     h2 {
         font-size: 1.5rem;
     }
     header img {
-        width: 30%;
+        width: 50%;
     }
    
     .nav_list li {
         font-size: 1.5rem;
     }
+    .footer_content {
+        font-size: 1rem;
+    }
+    
 }
