@@ -1,0 +1,40 @@
+/* GLobal for mobile */
+main {
+    text-align: center;
+}
+.recipes_container {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ 
+}
+.recipes_container div {
+    border: 0.5px solid var(--light_orange);
+    border-radius: 5px;
+    margin: 0.5em;
+    padding: 0.5em;
+    
+}
+.recipes_container img {
+    height: 200px;
+}
+
+/* Tablet */
+@media only screen and (min-width: 641px) {
+    .recipes_container {
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+   
+    
+}
+
+/* Desktop */
+@media only screen and (min-width: 1008px) {
+    .recipes_container {
+        grid-template-columns: repeat(5, 1fr);
+        
+       }
+    .recipes_container img {
+        height: 200px;
+    }
+}

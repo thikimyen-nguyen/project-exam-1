@@ -26,11 +26,9 @@ main {
     .image_container {
         text-align: left;
     }
-    .small img {
-        width: 50%;
-    }
+   
     .small {
-        text-align: center;
+        text-align: right;
     }
     main {
         padding: 1.5em;
