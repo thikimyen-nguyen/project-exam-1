@@ -17,6 +17,10 @@ body {
 img {
     width: 100%;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
 h1, h2 {
     text-transform: capitalize;
     font-family: var(--heading_font);

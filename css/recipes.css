@@ -7,15 +7,18 @@ main {
  grid-template-columns: 1fr 1fr;
  
 }
-.recipes_container div {
+.thumbnail {
     border: 0.5px solid var(--light_orange);
     border-radius: 5px;
     margin: 0.5em;
     padding: 0.5em;
-    
+    display: flex;
+    flex-direction: column;
 }
-.recipes_container img {
-    height: 200px;
+.thumbnail img {
+    /* overflow: hidden; */
+    height: 150px;
+    object-fit: cover;
 }
 
 /* Tablet */
@@ -24,7 +27,11 @@ main {
         grid-template-columns: repeat(3, 1fr);
         
     }
-   
+    .thumbnail img {
+        height: 200px;
+      
+    }
+    
     
 }
 
@@ -34,7 +41,5 @@ main {
         grid-template-columns: repeat(5, 1fr);
         
        }
-    .recipes_container img {
-        height: 200px;
-    }
+  
 }
