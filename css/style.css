@@ -129,6 +129,13 @@ footer img {
     /* color: black; */
     cursor: pointer;
 }
+.loader {
+    color: var(--dark_orange);
+    text-align: center;
+}
+button {
+    margin: 2em;
+}
 
 
 /* Tablet */

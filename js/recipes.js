@@ -1,4 +1,4 @@
-import { getPosts } from "./components/fetch_posts.js";
+import { getPosts, loader, postsURL } from "./components/fetch_posts.js";
 
 // main fetch
 async function createRecipesHTML() {
@@ -9,10 +9,11 @@ createRecipesHTML();
 
 // fetch first 10 posts
 const recipesContainer = document.querySelector(".recipes_container");
+
 const viewMoreButton = document.querySelector("#viewmore_button");
 
 function createThumbnails(posts) {
-    
+    loader.innerHTML = "";
    
     for (let i = 0; i < posts.length; i++) {
        
@@ -31,5 +32,26 @@ function createThumbnails(posts) {
 }
 
 // fetch next 10 posts
+let pageNumber = 2;
+    
+viewMoreButton.onclick = function createMorePosts() {
+  
+    async function getMorePosts() {
+       
+        const nextPageBase = `?per_page=10&page=${pageNumber}`;
+        const nextPageUrl = postsURL + nextPageBase;
+        console.log(nextPageUrl);
+        const response = await fetch(nextPageUrl);
+        const newPosts = await response.json();
+        console.log(newPosts);
+        pageNumber += 1;
+        createThumbnails(newPosts);
+    }
+    
+    console.log(pageNumber);
+    getMorePosts();
+    
+
+}
 
 
