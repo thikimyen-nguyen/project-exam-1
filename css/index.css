@@ -3,7 +3,7 @@
 .cover {
     position: relative;
     height: 200px;
-    margin-bottom: 2.5em;
+    margin-bottom: 1.5em;
 }
 .cover_content {
     position: absolute;
@@ -46,7 +46,7 @@
     
     .cover {
         height: 300px;
-        margin-bottom: 3em;
+        margin-bottom: 2em;
     }
     
     .cover_content p {
@@ -66,7 +66,7 @@
  
     .cover {
         height: 500px;
-        margin-bottom: 7em;
+        margin-bottom: 3em;
     }
    
     /* Posts */
