@@ -1,0 +1,35 @@
+img {
+   width: 60%;
+   border-radius: 10px;
+}
+main {
+    text-align: center;
+    padding: 0em 1em;
+}
+.content {
+    text-align: left;
+}
+
+
+/* Tablet */
+@media only screen and (min-width: 641px) {
+    img {
+        width: 40%;
+     }
+     main {
+        padding: 0em 2em;
+     }
+  
+    
+}
+
+/* Desktop */
+@media only screen and (min-width: 1008px) {
+    img {
+        width: 30%;
+     }
+     main {
+        padding: 0em 4em;
+     }
+   
+}

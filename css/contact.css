@@ -14,8 +14,6 @@ button {
     width: 30%;
 }
 .error {
-    color: red;
-    font-size: 0.7rem;
     display: none;
 }
 
@@ -24,9 +22,7 @@ button {
         max-width: 600px;
         margin: auto;
     }
-    .error {
-        font-size: 0.8rem;
-    }
+   
     input, textarea {
         border-radius: 10px;
         font-size: x-large;
@@ -39,8 +35,6 @@ button {
 	main {
         max-width: 800px;
     }
-    .error {
-        font-size: 1rem;
-    }
+   
     
 }

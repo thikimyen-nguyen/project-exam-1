@@ -1,9 +1,14 @@
 import { getPosts, loader, postsURL } from "./components/fetch_posts.js";
-
+import { message } from "./components/message.js";
 // main fetch
 async function createRecipesHTML() {
-    const posts = await getPosts();
-    createThumbnails(posts);
+    try {
+        const posts = await getPosts();
+        createThumbnails(posts);
+    } catch (error) {
+        loader.innerHTML = message("error", error);
+    }
+   
 }
 createRecipesHTML();
 
@@ -40,18 +45,13 @@ viewMoreButton.onclick = function createMorePosts() {
        
         const nextPageBase = `?per_page=10&page=${pageNumber}`;
         const nextPageUrl = postsURL + nextPageBase;
-        console.log(nextPageUrl);
         const response = await fetch(nextPageUrl);
         const newPosts = await response.json();
         console.log(newPosts);
         pageNumber += 1;
         createThumbnails(newPosts);
     }
-    
-    console.log(pageNumber);
     getMorePosts();
-    
-
 }
 
 

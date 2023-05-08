@@ -5,9 +5,11 @@ const loader = document.querySelector(".loader");
 
 
 async function getPosts() {
+
     const response = await fetch(postsURL);
     const posts = await response.json();
-    console.log(posts);
     return posts;
+  
 }
+
 export {getPosts, loader, postsURL}
