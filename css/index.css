@@ -23,7 +23,6 @@
 .posts {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* margin: auto; */
    
 }
 .posts div {
@@ -31,50 +30,48 @@
     border-radius: 5px;
     margin: 0.5em;
     padding: 0.5em;
+    height: 200px;
 }
 
 .post-container {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    align-items: center;
     margin: 1em 0em;
+   
+}
+.posts img {
+    height: 70%;
+    object-fit: cover;
 }
 /* carousel */
-/* .previous_button, .next_button {
-    display: none;
-} */
 button {
+    display: none;
     position: relative;
     background-color: transparent;
     border: none;
-    border-radius: 50%;
     cursor: pointer;
     overflow: visible;
+    
 }
-.next::before, button::after {
+
+.next::before, .next::after, .previous::before, .previous::after {
     content: '';
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%) rotate(45deg);
     width: 20px;
     height: 20px;
+    top: 50%;
     border-top: 5px solid var(--light_orange);
     border-right: 5px solid var(--light_orange);
     transition: transform 0.3s ease;
 }
 .next::after {
-    transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) translateX(-100%) rotate(45deg);
+}
+.next::before {
+    transform: translateY(-50%) translateX(-50%) rotate(45deg);
 }
 .previous::before {
-    content: '';
-    position: absolute;
-    top: 50%;
     transform: translateY(-50%) translateX(-50%) rotate(225deg);
-    width: 20px;
-    height: 20px;
-    border-top: 5px solid var(--light_orange);
-    border-right: 5px solid var(--light_orange);
-    transition: transform 0.3s ease;
 }
 .previous::after {
     transform: translateY(-50%) rotate(225deg);
@@ -97,6 +94,14 @@ button {
         grid-template-columns: repeat(3, 1fr);
        
     }
+    .posts div {
+        height: 300px;
+    
+    }
+    button {
+        display: block;
+      
+    }
    
     
 }
@@ -117,11 +122,5 @@ button {
     .cover_content p {
         font-size: 2.5rem;
     }
-    .previous_button, .next_button {
-        display: block;
-    }
-  
-    .post-container button {
-       height: 20%;
-    }
+   
 }
