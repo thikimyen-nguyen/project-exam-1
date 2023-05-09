@@ -23,7 +23,7 @@
 .posts {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: auto;
+    /* margin: auto; */
    
 }
 .posts div {
@@ -32,12 +32,52 @@
     margin: 0.5em;
     padding: 0.5em;
 }
+
 .post-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
     margin: 1em 0em;
 }
 /* carousel */
-.previous_button, .next_button {
+/* .previous_button, .next_button {
     display: none;
+} */
+button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: visible;
+}
+.next::before, button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--light_orange);
+    border-right: 5px solid var(--light_orange);
+    transition: transform 0.3s ease;
+}
+.next::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+.previous::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%) rotate(225deg);
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--light_orange);
+    border-right: 5px solid var(--light_orange);
+    transition: transform 0.3s ease;
+}
+.previous::after {
+    transform: translateY(-50%) rotate(225deg);
 }
 
 
@@ -80,11 +120,7 @@
     .previous_button, .next_button {
         display: block;
     }
-    .post-container {
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        align-items: center;
-    }
+  
     .post-container button {
        height: 20%;
     }

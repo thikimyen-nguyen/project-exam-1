@@ -47,10 +47,13 @@ h2 {
 header {
     display: grid;
     grid-template-columns: auto 1fr;
-    padding: 2em;
+    padding: 2em 2em 1em;
     align-items: center;
     position: sticky;
-    position: relative;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+
 }
 header img {
     width: 30%;
@@ -78,8 +81,9 @@ header img {
     padding: 2em;
     z-index: 1;
 }
+
 .nav_list li {
-    /* padding: 1em ; */
+    
     margin-bottom: 1em;
 }
 .nav_list li:hover {
