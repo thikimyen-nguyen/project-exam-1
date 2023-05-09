@@ -9,20 +9,28 @@ async function getLatestPosts() {
     return latestPosts
 
 }
-const posts = document.querySelector(".posts");
+const slideOne = document.querySelector(".slide_one");
+const slideTwo = document.querySelector(".slide_two");
+const slideThree = document.querySelector(".slide_three");
 
 function createThumbnails(latestPosts) {
     loader.innerHTML = "";
-    for (let i = 0; i < 4; i++) {
-       
+    for (let i = 0; i < latestPosts.length; i++) {
         const postImage = latestPosts[i].jetpack_featured_media_url;
         const postName = latestPosts[i].title.rendered;
         const postID = latestPosts[i].id;
-     
-        posts.innerHTML += ` <a href="detail.html?id=${postID}"><div>
-                                        <img src="${postImage}" alt="${postName}">
-                                        <h2>${postName}</h2>
-                                        </div></a>`
+        const postsHtml = `<a href="detail.html?id=${postID}"><div>
+                            <img src="${postImage}" alt="${postName}">
+                            <h2>${postName}</h2>
+                            </div></a>`
+        if (i<4) {
+            slideOne.innerHTML += postsHtml;
+        } else if (i<8) {
+            slideTwo.innerHTML += postsHtml;
+        } else {
+            slideThree.innerHTML += postsHtml;
+        }
+       
     }
    
 }
