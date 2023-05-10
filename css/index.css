@@ -41,9 +41,10 @@
 }
 
 .post-container {
-    display: flex;
-    flex-direction: column;
-    margin: 1em auto;
+   
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    position: relative;
 }
 .posts img {
     height: 70%;
@@ -51,7 +52,7 @@
 }
 /* carousel */
 button {
-    display: none;
+  
     position: relative;
     background-color: transparent;
     border: none;
@@ -63,6 +64,7 @@ button {
     display: flex;
     margin: auto;
 }
+
 .next::before, .next::after, .previous::before, .previous::after {
     content: '';
     position: absolute;
@@ -121,10 +123,7 @@ button {
     }
     .posts div {
         height: 300px;
-    
     }
-  
-    
 }
 
 /* Desktop */
