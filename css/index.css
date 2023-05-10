@@ -41,8 +41,8 @@
 }
 
 .post-container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
     margin: 1em auto;
 }
 .posts img {
@@ -59,7 +59,10 @@ button {
     overflow: visible;
     
 }
-
+.buttons {
+    display: flex;
+    margin: auto;
+}
 .next::before, .next::after, .previous::before, .previous::after {
     content: '';
     position: absolute;
@@ -112,7 +115,9 @@ button {
     }
     /* Posts */
     .posts {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+        margin: auto;
     }
     .posts div {
         height: 300px;
@@ -133,7 +138,7 @@ button {
     /* Posts */
     .posts {
         grid-template-columns: repeat(4, 1fr);
-       
+        max-width: 1400px;
     }
     .cover_content p {
         font-size: 2.5rem;
