@@ -23,16 +23,21 @@
 .posts {
     grid-template-columns: 1fr 1fr;
     display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateX(0);
 }
-.active {
-    display: grid;
-}
+
 .posts div {
     border: 0.5px solid var(--light_orange);
     border-radius: 5px;
     margin: 0.5em;
     padding: 0.5em;
     height: 200px;
+}
+.posts div:hover {
+    border: 2px solid #BA3B0A;
+    color: #BA3B0A;
 }
 
 .post-container {
@@ -83,6 +88,16 @@ button {
 .active_button {
     display: block;
 }
+.posts.active {
+    display: grid;
+    opacity: 1;
+}
+.posts.next {
+    transform: translateX(100%); 
+}
+.posts.previous {
+    transform: translateX(-100%); 
+  }
 
 /* Tablet */
 @media only screen and (min-width: 641px) {
@@ -103,11 +118,7 @@ button {
         height: 300px;
     
     }
-    /* button {
-        display: block;
-      
-    }
-    */
+  
     
 }
 

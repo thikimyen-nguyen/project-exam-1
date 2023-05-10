@@ -50,21 +50,31 @@ const totalSlides = slides.length;
 let currentSlide = 0;
 
 const nextButton = document.querySelector(".next");
+const previousButton = document.querySelector(".previous");
 
 
 function showSlide(slideNumber) {
     slides[currentSlide].classList.remove("active");
     slides[slideNumber].classList.add("active");
     currentSlide = slideNumber;
+    nextButton.classList.add("active_button");
+    previousButton.classList.add("active_button");
     if (currentSlide === totalSlides - 1) {
         nextButton.disabled = true;
         nextButton.classList.add("disable");
       } else {
         nextButton.disabled = false;
-        nextButton.classList.add("active_button");
+        nextButton.classList.remove("disable");
       }
+    if (currentSlide === 0) {
+        previousButton.disabled = true;
+        previousButton.classList.add("disable");
+       
+    } else {
+        previousButton.disabled = false;
+        previousButton.classList.remove("disable");
+    }
 }
-
 
 function showNextSlide() {
     let nextSlide = currentSlide + 1;
@@ -72,3 +82,9 @@ function showNextSlide() {
 }
 
 nextButton.addEventListener("click", showNextSlide)
+
+function showPreviousSlide() {
+    let previousSlide = currentSlide - 1;
+    showSlide(previousSlide);
+}
+previousButton.addEventListener("click", showPreviousSlide)
