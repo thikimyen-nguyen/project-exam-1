@@ -3,6 +3,7 @@ import { postsURL, loader } from "./components/fetch_posts.js";
 const latestPostsBase = `?per_page=12`;
 const latestPostsUrl = postsURL + latestPostsBase;
 
+// Fetch 12 latest posts
 async function getLatestPosts() {
     const response = await fetch(latestPostsUrl);
     const latestPosts = await response.json();
@@ -35,9 +36,39 @@ function createThumbnails(latestPosts) {
    
 }
 
-
 async function createHtml() {
     const latestPosts = await getLatestPosts();
     createThumbnails(latestPosts);
+    showSlide(currentSlide);
 }
 createHtml()
+
+// Carousel
+const carousel = document.querySelector(".carousel");
+const slides = carousel.querySelectorAll(".posts");
+const totalSlides = slides.length;
+let currentSlide = 0;
+
+const nextButton = document.querySelector(".next");
+
+
+function showSlide(slideNumber) {
+    slides[currentSlide].classList.remove("active");
+    slides[slideNumber].classList.add("active");
+    currentSlide = slideNumber;
+    if (currentSlide === totalSlides - 1) {
+        nextButton.disabled = true;
+        nextButton.classList.add("disable");
+      } else {
+        nextButton.disabled = false;
+        nextButton.classList.add("active_button");
+      }
+}
+
+
+function showNextSlide() {
+    let nextSlide = currentSlide + 1;
+    showSlide(nextSlide);
+}
+
+nextButton.addEventListener("click", showNextSlide)

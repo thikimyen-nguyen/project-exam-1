@@ -21,9 +21,11 @@
 }
 /* Posts */
 .posts {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    
+    display: none;
+}
+.active {
+    display: grid;
 }
 .posts div {
     border: 0.5px solid var(--light_orange);
@@ -75,7 +77,12 @@ button {
 .previous::after {
     transform: translateY(-50%) rotate(225deg);
 }
-
+.disable {
+    opacity: 0.3;
+}
+.active_button {
+    display: block;
+}
 
 /* Tablet */
 @media only screen and (min-width: 641px) {
@@ -91,17 +98,16 @@ button {
     /* Posts */
     .posts {
         grid-template-columns: repeat(3, 1fr);
-       
     }
     .posts div {
         height: 300px;
     
     }
-    button {
+    /* button {
         display: block;
       
     }
-   
+    */
     
 }
 
