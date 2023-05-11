@@ -24,20 +24,22 @@ getSinglePost()
 const detailContainer = document.querySelector(".detail-container");
 const pageTitle = document.querySelector("title");
 const modal = document.querySelector(".modal");
-const detailTitle = document.querySelector("h1");
-const detailImage = document.querySelector(".detail_image");
-const detailContent = document.querySelector(".content");
 
 function createDetailHtml(singlePost) {
     loader.innerHTML = ""
     const postTitle = singlePost.title.rendered;
     const postImage = singlePost.jetpack_featured_media_url;
     const postContent = singlePost.content.rendered;
-    pageTitle.innerHTML += `3F blog | ${detailTitle}`
-    detailTitle.innerHTML += `${postTitle}`
-    detailImage.innerHTML += `<img src="${postImage}" alt="${postTitle}">`
-    detailContent.innerHTML += `${postContent}`
+    pageTitle.innerHTML += `3F blog | ${postTitle}`
+    detailContainer.innerHTML += `<h1>${postTitle}</h1>
+                                 <img class="detail_image" src="${postImage}" alt="${postTitle}">
+                                 <div class="content">${postContent}</div>`
+    // show Modal
     modal.innerHTML += `<img src="${postImage}" alt="${postTitle}">`
+    const detailImage = document.querySelector(".detail_image");
+    detailImage.onclick = function showModal() {
+        modal.style.display = "block";
+    }
 }
 
 // main
@@ -47,10 +49,6 @@ async function createHtml() {
 }
 createHtml()
 
-// show modal
-detailImage.onclick = function showModal() {
-    modal.style.display = "block";
-}
 // close modal
 function closeModal() {
     modal.style.display = "none";
