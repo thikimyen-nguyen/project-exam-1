@@ -137,9 +137,7 @@ footer img {
     color: var(--dark_orange);
     text-align: center;
 }
-button {
-    margin: 2em;
-}
+
 .error {
     color: red;
     font-size: 0.7rem;

@@ -21,11 +21,12 @@
 }
 /* Posts */
 .posts {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     display: none;
-    opacity: 0;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    transform: translateX(0);
+    /* transform: translateX(0); */
+   
 }
 
 .posts div {
@@ -40,30 +41,35 @@
     color: #BA3B0A;
 }
 
-.post-container {
-   
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    position: relative;
-}
 .posts img {
     height: 70%;
     object-fit: cover;
 }
 /* carousel */
 button {
-  
-    position: relative;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 60px;
+    height: 60px;
     border: none;
     cursor: pointer;
-    overflow: visible;
-    
+    border-radius: 5px;
+    position: absolute;
+    top: 45%;
+   
 }
-.buttons {
-    display: flex;
-    margin: auto;
+
+.post-container {
+    position: relative;
 }
+
+.next {
+   right: -0.5%;
+}
+.previous {
+    left: -0.5%;
+}
+
+
 
 .next::before, .next::after, .previous::before, .previous::after {
     content: '';
@@ -71,8 +77,8 @@ button {
     width: 20px;
     height: 20px;
     top: 50%;
-    border-top: 5px solid var(--light_orange);
-    border-right: 5px solid var(--light_orange);
+    border-top: 5px solid #BA3B0A;
+    border-right: 5px solid #BA3B0A;
     transition: transform 0.3s ease;
 }
 .next::after {
@@ -88,7 +94,7 @@ button {
     transform: translateY(-50%) rotate(225deg);
 }
 .disable {
-    opacity: 0.3;
+    opacity: 0;
 }
 .active_button {
     display: block;
@@ -97,12 +103,7 @@ button {
     display: grid;
     opacity: 1;
 }
-.posts.next {
-    transform: translateX(100%); 
-}
-.posts.previous {
-    transform: translateX(-100%); 
-  }
+
 
 /* Tablet */
 @media only screen and (min-width: 641px) {
@@ -124,6 +125,12 @@ button {
     .posts div {
         height: 300px;
     }
+    .next {
+        right: 5%;
+     }
+     .previous {
+         left: 5%;
+     }
 }
 
 /* Desktop */
@@ -142,5 +149,9 @@ button {
     .cover_content p {
         font-size: 2.5rem;
     }
-   
+    .next {
+        right: -1%;
+     }
+     .previous {
+         left: -1%;
 }

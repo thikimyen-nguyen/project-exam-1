@@ -13,7 +13,7 @@ async function getLatestPosts() {
 const slideOne = document.querySelector(".slide_one");
 const slideTwo = document.querySelector(".slide_two");
 const slideThree = document.querySelector(".slide_three");
-const slideFour = document.querySelector(".slide_four");
+
 
 // function checkMediaQuery(query) {
 //     return window.matchMedia(query).matches;
