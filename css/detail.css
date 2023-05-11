@@ -23,6 +23,11 @@ main {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.9);
   }
+  .detail_image:hover {
+    cursor: pointer;
+    border: 2px solid var(--dark_orange);
+    opacity: 0.8;
+  }
 /* Tablet */
 @media only screen and (min-width: 641px) {
     img {
