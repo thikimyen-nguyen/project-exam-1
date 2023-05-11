@@ -4,7 +4,6 @@
     position: relative;
     height: 200px;
     margin-bottom: 1.5em;
-
 }
 .cover_content {
     position: absolute;
@@ -70,8 +69,6 @@ button {
 .previous {
     left: -0.5%;
 }
-
-
 
 .next::before, .next::after, .previous::before, .previous::after {
     content: '';
