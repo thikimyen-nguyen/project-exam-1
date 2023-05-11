@@ -3,7 +3,6 @@ import { message } from "./components/message.js";
 const querryString = document.location.search;
 const param = new URLSearchParams(querryString);
 const id = param.get("id");
-console.log(id);
 
 const detailUrl = postsURL + "/" + id;
 
@@ -24,16 +23,21 @@ getSinglePost()
 
 const detailContainer = document.querySelector(".detail-container");
 const pageTitle = document.querySelector("title");
+const modal = document.querySelector(".modal");
+const detailTitle = document.querySelector("h1");
+const detailImage = document.querySelector(".detail_image");
+const detailContent = document.querySelector(".content");
+
 function createDetailHtml(singlePost) {
     loader.innerHTML = ""
-    const detailTitle = singlePost.title.rendered;
-    const detailImage = singlePost.jetpack_featured_media_url;
-    const detailContent = singlePost.content.rendered;
-    pageTitle.innerHTML += `3F blog | ${detailTitle}`;
-    detailContainer.innerHTML += `<h1>${detailTitle}<hr></h1>
-                                    <img src="${detailImage}" alt="${detailTitle}">
-                                    <div class="content">${detailContent}</div>
-                                    `
+    const postTitle = singlePost.title.rendered;
+    const postImage = singlePost.jetpack_featured_media_url;
+    const postContent = singlePost.content.rendered;
+    pageTitle.innerHTML += `3F blog | ${detailTitle}`
+    detailTitle.innerHTML += `${postTitle}`
+    detailImage.innerHTML += `<img src="${postImage}" alt="${postTitle}">`
+    detailContent.innerHTML += `${postContent}`
+    modal.innerHTML += `<img src="${postImage}" alt="${postTitle}">`
 }
 
 // main
@@ -43,4 +47,16 @@ async function createHtml() {
 }
 createHtml()
 
-// create modal
+// show modal
+detailImage.onclick = function showModal() {
+    modal.style.display = "block";
+}
+// close modal
+function closeModal() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}

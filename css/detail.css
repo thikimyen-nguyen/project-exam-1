@@ -1,5 +1,5 @@
 img {
-   width: 60%;
+   width: 80%;
    border-radius: 10px;
 }
 main {
@@ -10,15 +10,26 @@ main {
     text-align: left;
 }
 
-
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
 /* Tablet */
 @media only screen and (min-width: 641px) {
     img {
-        width: 40%;
+        width: 70%;
      }
-     main {
-        padding: 0em 2em;
-     }
+    main {
+    padding: 0em 2em;
+    }
   
     
 }
@@ -26,10 +37,10 @@ main {
 /* Desktop */
 @media only screen and (min-width: 1008px) {
     img {
-        width: 30%;
+        width: 50%;
      }
-     main {
-        padding: 0em 4em;
-     }
+    main {
+    padding: 0em 4em;
+    }
    
 }
