@@ -26,7 +26,7 @@ function createThumbnails(posts) {
      
         recipesContainer.innerHTML += ` <a href="detail.html?id=${postID}"  class="thumbnail"><div>
                                         <img src="${postImage}" alt="${postName}">
-                                        <h2>${postName}</h2>
+                                        <p>${postName}</p>
                                         </div></a>`
     
        
@@ -43,14 +43,14 @@ let pageNumber = 2;
 viewMoreButton.onclick = function createMorePosts() {
   
     async function getMorePosts() {
-       
+     
         const nextPageBase = `?per_page=10&page=${pageNumber}`;
         const nextPageUrl = postsURL + nextPageBase;
         const response = await fetch(nextPageUrl);
         const newPosts = await response.json();
-        console.log(newPosts);
         pageNumber += 1;
         createThumbnails(newPosts);
+     
     }
     getMorePosts();
 }

@@ -13,7 +13,7 @@ async function getLatestPosts() {
 const slideOne = document.querySelector(".slide_one");
 const slideTwo = document.querySelector(".slide_two");
 const slideThree = document.querySelector(".slide_three");
-
+const buttons = document.querySelector("button");
 
 // function checkMediaQuery(query) {
 //     return window.matchMedia(query).matches;
@@ -27,7 +27,7 @@ function createThumbnails(latestPosts) {
         const postID = latestPosts[i].id;
         const postsHtml = `<a href="detail.html?id=${postID}"><div>
                             <img src="${postImage}" alt="${postName}">
-                            <h2>${postName}</h2>
+                            <p>${postName}</p>
                             </div></a>`
         if (i<4) {
             slideOne.innerHTML += postsHtml;
@@ -38,7 +38,7 @@ function createThumbnails(latestPosts) {
         }
        
     }
-   
+    buttons.style.display = "block";
 }
 
 

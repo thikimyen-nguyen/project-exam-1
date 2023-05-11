@@ -30,7 +30,7 @@ function createDetailHtml(singlePost) {
     const detailImage = singlePost.jetpack_featured_media_url;
     const detailContent = singlePost.content.rendered;
     pageTitle.innerHTML += `3F blog | ${detailTitle}`;
-    detailContainer.innerHTML += `<h1>${detailTitle}</h1>
+    detailContainer.innerHTML += `<h1>${detailTitle}<hr></h1>
                                     <img src="${detailImage}" alt="${detailTitle}">
                                     <div class="content">${detailContent}</div>
                                     `
