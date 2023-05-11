@@ -42,3 +42,5 @@ async function createHtml() {
     createDetailHtml(singlePost);
 }
 createHtml()
+
+// create modal
