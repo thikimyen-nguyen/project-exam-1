@@ -6,19 +6,29 @@ const navList = document.querySelector('.nav_list');
 hamburger.innerHTML += `<div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>`
-navList.innerHTML += ` <li><a class="nav_link" href="index.html">Home</a></li>
+navList.innerHTML += `  <li class="close_list">X</li>
+                        <li><a class="nav_link" href="index.html">Home</a></li>
                         <li><a class="nav_link" href="recipes.html">Recipes</a></li>
                         <li><a class="nav_link" href="about.html">About</a></li>
                         <li><a class="nav_link" href="contact.html">Contact</a></li>`
+
+// show nav list
+
 hamburger.onclick = function showNavList() {
     navList.style.display = "block";
+      
 }
 
+// close nav list
+const closeNavList = document.querySelector(".close_list");
+closeNavList.onclick = function closeList() {
+    navList.style.display = "none";
+}
+
+
+// add active page
 const currentPageURL = window.location.href;
-
-
 const navLinks = document.querySelectorAll(".nav_link");
-
 
 for (let i = 0; i < navLinks.length; i++) {
     const navLinkUrl = navLinks[i].href;

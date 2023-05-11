@@ -73,15 +73,20 @@ header img {
     border-radius: 5px;
 }
 .nav_list {
+   
     display: none;
     list-style: none;
-    position: absolute ;
+    position: fixed ;
     background-color: white;
     left: 60% ;
-    padding: 2em;
+    padding: 0em 2em;
     z-index: 1;
+    overflow: auto;
 }
-
+.close_list {
+    color: var(--dark_orange);
+    font-size: 1.5rem;
+}
 .nav_list li {
     
     margin-bottom: 1em;
@@ -185,7 +190,9 @@ footer img {
     .error {
         font-size: 0.8rem;
     }
-   
+    .close_list {
+       display: none;
+    }
     
 }
 
