@@ -43,14 +43,17 @@ let pageNumber = 2;
 viewMoreButton.onclick = function createMorePosts() {
   
     async function getMorePosts() {
-     
+        try {
         const nextPageBase = `?per_page=10&page=${pageNumber}`;
         const nextPageUrl = postsURL + nextPageBase;
         const response = await fetch(nextPageUrl);
         const newPosts = await response.json();
-        pageNumber += 1;
         createThumbnails(newPosts);
+        viewMoreButton.style.display = "none";
      
+        } catch (error) {
+            loader.innerHTML = message("error", error);
+        }
     }
     getMorePosts();
 }

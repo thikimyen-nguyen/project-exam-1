@@ -36,10 +36,12 @@
     margin: 0.5em;
     padding: 0.5em;
     height: 200px;
+    transition: 0.3s ease;
 }
 .posts div:hover {
-    border: 2px solid #BA3B0A;
-    color: #BA3B0A;
+    transform: scale(1.02);
+    color: var(--dark_orange);
+ 
 }
 
 .posts img {
@@ -64,10 +66,10 @@ button {
 }
 
 .next {
-   right: -0.5%;
+   right: 0;
 }
 .previous {
-    left: -0.5%;
+    left: 0;
 }
 
 .next::before, .next::after, .previous::before, .previous::after {
@@ -148,9 +150,12 @@ button {
     .cover_content p {
         font-size: 2.5rem;
     }
+
     .next {
-        right: -1%;
-     }
-     .previous {
-         left: -1%;
+        right: 0;
+    }
+    .previous {
+        left: 0;
+    }
+    
 }
