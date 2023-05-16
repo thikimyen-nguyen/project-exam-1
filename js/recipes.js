@@ -15,9 +15,10 @@ async function createRecipesHTML() {
 }
 createRecipesHTML();
 const recipesContainer = document.querySelector(".recipes_container");
-
+const viewMoreButton = document.querySelector("#viewmore_button");
+viewMoreButton.style.display = "none";
 function createThumbnails(posts) {
-   
+    viewMoreButton.style.display = "block";
     for (let i = 0; i < posts.length; i++) {
        
         const postImage = posts[i].jetpack_featured_media_url;
@@ -33,9 +34,6 @@ function createThumbnails(posts) {
     }
    
 }
-
-const viewMoreButton = document.querySelector("#viewmore_button");
-
 
 // fetch next 10 posts
 let pageNumber = 2;
