@@ -25,7 +25,8 @@ main {
   }
   .detail_image:hover {
     cursor: pointer;
-    border: 2px solid var(--dark_orange);
+    transform: scale(1.01);
+    transition: 0.3s ease;
     opacity: 0.8;
   }
 /* Tablet */

@@ -31,7 +31,7 @@
 }
 
 .posts div {
-    border: 0.5px solid var(--light_orange);
+    border: 1px solid var(--light_orange);
     border-radius: 5px;
     margin: 0.5em;
     padding: 0.5em;
@@ -39,9 +39,9 @@
     transition: 0.3s ease;
 }
 .posts div:hover {
-    transform: scale(1.02);
+    background-color: rgba(211, 211, 211, 0.2);
     color: var(--dark_orange);
- 
+    border: 1px solid var(--dark_orange);
 }
 
 .posts img {
@@ -102,7 +102,7 @@ button {
 }
 .posts.active {
     display: grid;
-    opacity: 1;
+  
 }
 
 
