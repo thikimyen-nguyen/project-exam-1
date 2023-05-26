@@ -55,8 +55,9 @@ header {
     z-index: 1;
 
 }
-header img {
-    width: 130px;
+header img, footer img {
+    width: 100px;
+    height: 63px;
 }
 .header_nav {
     justify-self: end;
@@ -113,9 +114,9 @@ footer {
     padding-top: 1em;
     margin-top: 2em;
 }
-footer img {
+/* footer img {
     width: 25%;
-}
+} */
 .footer_ending {
     background-color: var(--dark_orange);
     color: white;
@@ -181,14 +182,16 @@ footer img {
     .footer_content {
         font-size: 0.8rem;
     }
-    footer img {
-        width: 15%;
-    }
+   
     .error {
         font-size: 0.8rem;
     }
     .close_list {
        display: none;
+    }
+    header img, footer img {
+        width: 120px;
+        height: 75px;
     }
     
 }
@@ -205,8 +208,9 @@ footer img {
     h2, .cta {
         font-size: 1.5rem;
     }
-    header img {
+    header img, footer img {
         width: 150px;
+        height: 94px;
     }
    
     .nav_list li {
