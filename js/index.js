@@ -1,5 +1,5 @@
 import { postsURL, loader } from "./components/fetch_posts.js";
-
+import { message } from "./components/message.js";
 const latestPostsBase = `?per_page=12`;
 const latestPostsUrl = postsURL + latestPostsBase;
 
@@ -8,16 +8,14 @@ async function getLatestPosts() {
     const response = await fetch(latestPostsUrl);
     const latestPosts = await response.json();
     return latestPosts
-
 }
+
 const slideOne = document.querySelector(".slide_one");
 const slideTwo = document.querySelector(".slide_two");
 const slideThree = document.querySelector(".slide_three");
 const buttons = document.querySelector("button");
 
-// function checkMediaQuery(query) {
-//     return window.matchMedia(query).matches;
-// }
+
 
 function createThumbnails(latestPosts) {
     loader.innerHTML = "";
@@ -44,9 +42,14 @@ function createThumbnails(latestPosts) {
 
 
 async function createHtml() {
-    const latestPosts = await getLatestPosts();
-    createThumbnails(latestPosts);
-    showSlide(currentSlide);
+    try {
+        const latestPosts = await getLatestPosts();
+        createThumbnails(latestPosts);
+        showSlide(currentSlide);
+    } catch (error) {
+        loader.innerHTML = message("error", error);
+    }
+  
 }
 createHtml()
 

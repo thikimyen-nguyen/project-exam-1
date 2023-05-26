@@ -37,7 +37,8 @@ function createThumbnails(posts) {
 
 // fetch next 10 posts
 let pageNumber = 2;
-    
+const fetchError = document.querySelector(".fetchmore-error");
+
 viewMoreButton.onclick = function createMorePosts() {
   
     async function getMorePosts() {
@@ -50,7 +51,7 @@ viewMoreButton.onclick = function createMorePosts() {
         viewMoreButton.style.display = "none";
      
         } catch (error) {
-            loader.innerHTML = message("error", error);
+            fetchError.innerHTML = message("error", error);
         }
     }
     getMorePosts();
