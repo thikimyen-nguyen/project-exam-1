@@ -18,12 +18,14 @@ hamburgerNavList.innerHTML += mainNavList;
 closeHamburger.innerHTML += `<div class="close_line"></div>
                                 <div class="close_line"></div>`
 
+
 // show hamburger nav list
 
 hamburger.onclick = function showNavList() {
     hamburgerNavList.style.display = "block";
     hamburger.style.display = "none";
     closeHamburger.style.display = "block";
+   
 }
 
 // close nav list
@@ -32,6 +34,7 @@ closeHamburger.onclick = function closeList() {
     hamburger.style.display = "flex";
     closeHamburger.style.display = "none";
 }
+
 
 // add active page
 const currentPageURL = window.location.href;

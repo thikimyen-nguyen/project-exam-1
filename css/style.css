@@ -64,6 +64,9 @@ header img, footer img {
 .header_nav {
     justify-self: end;
 }
+.desktop {
+    display: none;
+}
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -130,6 +133,7 @@ header img, footer img {
     text-decoration: none;
     color: black;
     padding: 0.5em 1em;
+    text-align: center;
 }
 .active_page {
     background-color: var(--light_orange);
@@ -187,7 +191,10 @@ footer {
     h2, .cta {
         font-size: 1.7rem;
     }
-   .hamburger, .hamburger_nav_list, .close_hamburger {
+    .desktop {
+        display: block;
+    }
+   .mobile, .hamburger_nav_list {
     display: none;
    }
    .nav_list {
@@ -195,7 +202,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     list-style: none;
     background-color: transparent;
-    position:static;
+    position: static;
     }
 
     .nav_list li {
