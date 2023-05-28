@@ -21,6 +21,7 @@ submitButton.onclick = function validateContact(event) {
     if (validateName(inputname) &&  validateEmail(email) && validateSubject(subject) && validateMessage(message)) {
         form.reset();
         submitSuccess.style.display = "block";
+        form.style.display = "none";
     }
 }
 
@@ -70,3 +71,5 @@ function validateMessage(message) {
         return false;
     }
 }
+
+// submit success message
