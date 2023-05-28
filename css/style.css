@@ -33,7 +33,7 @@ h1 {
 }
 hr {
     border-top: 1px solid var(--dark_orange);
-   
+    margin-bottom: 2em;
 }
 h2 {
     font-size: 1.3rem;
