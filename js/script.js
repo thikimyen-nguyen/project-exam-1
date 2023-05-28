@@ -7,17 +7,15 @@ const closeHamburger = document.querySelector(".close_hamburger");
 hamburger.innerHTML += `<div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>`
-navList.innerHTML += `<li><a class="nav_link" href="index.html">Home</a></li>
-                        <li><a class="nav_link" href="recipes.html">Recipes</a></li>
-                        <li><a class="nav_link" href="about.html">About</a></li>
-                        <li><a class="nav_link" href="contact.html">Contact</a></li>`
+const mainNavList = `<li><a class="nav_link" href="index.html">Home</a></li>
+                    <li><a class="nav_link" href="recipes.html">Recipes</a></li>
+                    <li><a class="nav_link" href="about.html">About</a></li>
+                    <li><a class="nav_link" href="contact.html">Contact</a></li>`
+navList.innerHTML += mainNavList;
 
-hamburgerNavList.innerHTML += `<div>
-                                <li><a class="nav_link" href="index.html">Home</a></li>
-                                <li><a class="nav_link" href="recipes.html">Recipes</a></li>
-                                <li><a class="nav_link" href="about.html">About</a></li>
-                                <li><a class="nav_link" href="contact.html">Contact</a></li></div>`
-closeHamburger.innerHTML += ` <div class="close_line"></div>
+hamburgerNavList.innerHTML += mainNavList;
+
+closeHamburger.innerHTML += `<div class="close_line"></div>
                                 <div class="close_line"></div>`
 
 // show hamburger nav list
@@ -34,8 +32,6 @@ closeHamburger.onclick = function closeList() {
     hamburger.style.display = "flex";
     closeHamburger.style.display = "none";
 }
-
-
 
 // add active page
 const currentPageURL = window.location.href;
