@@ -115,14 +115,13 @@ header img, footer img {
 }
 .hamburger_nav_list li {
     padding: 0.3em;
+    margin-bottom: 1em;
 }
 .close_list {
     color: var(--dark_orange);
     font-size: 1.5rem;
 }
-.hamburger_nav_list li {
-    margin-bottom: 1em;
-}
+
 .nav_list li:hover {
     text-decoration: underline;
 }
