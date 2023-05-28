@@ -8,7 +8,7 @@
 .cover_content {
     position: absolute;
     top: 30%;
-    left: 30%;
+    left: 34%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: var(--dark_orange);

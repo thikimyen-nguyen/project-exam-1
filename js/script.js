@@ -1,29 +1,40 @@
 // header
 
-const hamburger = document.querySelector('.hamburger');
-const navList = document.querySelector('.nav_list');
-
+const hamburger = document.querySelector(".hamburger");
+const navList = document.querySelector(".nav_list");
+const hamburgerNavList = document.querySelector(".hamburger_nav_list"); 
+const closeHamburger = document.querySelector(".close_hamburger"); 
 hamburger.innerHTML += `<div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>`
-navList.innerHTML += `  <li class="close_list">X</li>
-                        <li><a class="nav_link" href="index.html">Home</a></li>
+navList.innerHTML += `<li><a class="nav_link" href="index.html">Home</a></li>
                         <li><a class="nav_link" href="recipes.html">Recipes</a></li>
                         <li><a class="nav_link" href="about.html">About</a></li>
                         <li><a class="nav_link" href="contact.html">Contact</a></li>`
 
-// show nav list
+hamburgerNavList.innerHTML += `<div>
+                                <li><a class="nav_link" href="index.html">Home</a></li>
+                                <li><a class="nav_link" href="recipes.html">Recipes</a></li>
+                                <li><a class="nav_link" href="about.html">About</a></li>
+                                <li><a class="nav_link" href="contact.html">Contact</a></li></div>`
+closeHamburger.innerHTML += ` <div class="close_line"></div>
+                                <div class="close_line"></div>`
+
+// show hamburger nav list
 
 hamburger.onclick = function showNavList() {
-    navList.style.display = "block";
-      
+    hamburgerNavList.style.display = "block";
+    hamburger.style.display = "none";
+    closeHamburger.style.display = "block";
 }
 
 // close nav list
-const closeNavList = document.querySelector(".close_list");
-closeNavList.onclick = function closeList() {
-    navList.style.display = "none";
+closeHamburger.onclick = function closeList() {
+    hamburgerNavList.style.display = "none";
+    hamburger.style.display = "flex";
+    closeHamburger.style.display = "none";
 }
+
 
 
 // add active page
