@@ -1,67 +1,60 @@
-## Project Exam 1
 
-## Goal
+# 3F - A blog site for Food - Family - Friends
 
-To put into practice the skills learned over your first year of studies.
+![image](http://howareyounorway.no/wp-content/uploads/2023/05/project-exam1.jpg)
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+A simple overview of this project.
 
-### Home Page
-The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
+## Description
 
-### Blog Page
+This is my project exam 1 - the final and important project which covers all practical skills learnt in the first year of our study. I can personally decide the design and topic as a food blog site.
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+This site has been developed so far as following requirements: 
 
-### Blog Specific Page
+- A homepage with a list of Latest posts displayed in a carousel
+- A recipes page which shows first 10 posts as thumbnails and a View More button to show more posts.
+- A specific recipe page which displayd detail content with a modal on the image view.
+- An About page and a Contact page with Javascript for form validation.
+- The content is stored opn Wordpress as Headless CMS.
+- The site is built with pure HTML, CSS, and Javascript and fetching data from Wordpress REST API.
+- Conducting usibility tests via Hotjar for Interaction Design
+- Following strictly the principles for WCAG guidelines, content management and SEO
+- Hosting the site via Netlify
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+## Built With
 
-If images on the blog post page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+- HTML5
+- CSS3
+- Javascript
+- Wordpress
 
-### Contact page
+## Getting Started
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+### Installing
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+1. Clone the repo:
 
-### WordPress
+```bash
+git@github.com:thikimyen-nguyen/project-exam-1.git
+```
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+2. Install the dependencies:
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+```
+npm install
+```
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+### Link to website, live on Netlify
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+https://polite-donut-2b98ba.netlify.app/index.html
 
-## Level 1 Process
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
+## Contact
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+- My Email: nguyenthikimyen25@gmail.com
+- [My LinkedIn page](https://www.linkedin.com/in/yen-nguyen-76340440/)
+
+
+
+
 
