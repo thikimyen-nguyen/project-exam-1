@@ -1,13 +1,18 @@
 
-# 3F - A blog site for Food - Family - Friends
+# 3F blog  
 
 ![image](http://howareyounorway.no/wp-content/uploads/2023/05/project-exam1.jpg)
 
-A simple overview of this project.
+A blog site in the theme of Food - Family - Friends
 
 ## Description
 
-This is my project exam 1 - the final and important project which covers all practical skills learnt in the first year of our study. I can personally decide the design and topic as a food blog site.
+This is my project exam 1 - the final and important project which covers all practical skills learnt in the first year of our study. I can personally decide the design and topic as a food blog site. It includes:
+- A Homepage with Latest posts
+- A Recipes page 
+- An About Us page
+- An Contact page
+- A detailed recipe page
 
 This site has been developed so far as following requirements: 
 
@@ -26,27 +31,21 @@ This site has been developed so far as following requirements:
 - HTML5
 - CSS3
 - Javascript
-- Wordpress
+- Wordpress (Headless)
 
 ## Getting Started
 
 ### Installing
 
-1. Clone the repo:
+Clone the repo:
 
 ```bash
 git@github.com:thikimyen-nguyen/project-exam-1.git
 ```
 
-2. Install the dependencies:
-
-```
-npm install
-```
-
 ### Link to website, live on Netlify
 
-https://polite-donut-2b98ba.netlify.app/index.html
+https://food-family-friends.netlify.app/
 
 
 ## Contact
