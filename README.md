@@ -1,13 +1,13 @@
 
 # 3F blog  
 
-![image](http://howareyounorway.no/wp-content/uploads/2023/05/project-exam1.jpg)
+![image](http://yen-nguyen.no/wp-content/uploads/2023/10/Screenshot-2023-10-16-at-14.12.29.png)
 
 A blog site in the theme of Food - Family - Friends
 
 ## Description
 
-This is my project exam 1 - the final and important project which covers all practical skills learnt in the first year of our study. I can personally decide the design and topic as a food blog site. It includes:
+This is my project exam 1 - the final and important project which covers all practical skills learnt in the first year of our study. Students can decide theme and design but it must at leaste includes:
 - A Homepage
 - A Recipes page 
 - An About Us page
